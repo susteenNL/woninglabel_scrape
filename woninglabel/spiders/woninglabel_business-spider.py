@@ -105,15 +105,16 @@ class WoninglabelSpider(scrapy.Spider):
 
         for record in data['result']:
             l = ItemLoader(item=WoninglabelItem())
-            l.add_value('postcode', row['Postcode'])
-            l.add_value('huisnr', row['Huisnr'])
-            l.add_value('type', row['Type woning'])
-            l.add_value('scrape_date', datetime.strftime(datetime.now(), '%Y-%m-%d'))
-            l.add_value('bedrijf', record['advisor']['companyName'])
-            l.add_value('beoordeling', record['advisor']['reviewAverage'])
-            l.add_value('beoordeling_aantal', record['advisor']['reviewTotalCount'])
-            l.add_value('levertijd', record['advisor']['deliveryTime'])
-            l.add_value('prijs', record['price'])
+            l.add_value('ObjectId', row['nr'])
+            l.add_value('Postcode', row['Postcode'])
+            l.add_value('Huisnr', row['Huisnr'])
+            l.add_value('Type', row['Type woning'])
+            l.add_value('ScrapeDate', datetime.strftime(datetime.now(), '%Y-%m-%d'))
+            l.add_value('Bedrijf', record['advisor']['companyName'])
+            l.add_value('Beoordeling', record['advisor']['reviewAverage'])
+            l.add_value('BeoordelingAantal', record['advisor']['reviewTotalCount'])
+            l.add_value('Levertijd', record['advisor']['deliveryTime'])
+            l.add_value('Prijs', record['price'])
 
             item = l.load_item()
             yield item
