@@ -87,3 +87,13 @@ AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 RETRY_TIMES = 5
+DSN = 'frankgerritsma'
+DATABASE = {
+    'db_username': 'susteen_user',
+    'db_password': 'UNtfP-9g8WXBca6',
+    'db_name': 'SusteenDB',
+    'db_host': 'susteen.database.windows.net',
+}
+ITEM_PIPELINES = {
+    'woninglabel.pipelines.WoninglabelPipeline': 300
+}
