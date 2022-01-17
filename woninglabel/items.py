@@ -34,15 +34,15 @@ def remove_html_tags(value):
 
 class WoninglabelItem(scrapy.Item):
     
-    object_id = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
-    postcode = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
-    huisnr = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
-    type = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
-    scrape_date = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
-    bedrijf = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
-    beoordeling = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
-    beoordeling_aantal = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
-    levertijd = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
-    prijs = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
+    ObjectId = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
+    Postcode = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
+    Huisnr = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
+    Type = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
+    ScrapeDate = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
+    Bedrijf = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
+    Beoordeling = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
+    BeoordelingAantal = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
+    Levertijd = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
+    Prijs = scrapy.Field( input_processor=MapCompose(clear), output_processor=TakeFirst() )
     
     pass
