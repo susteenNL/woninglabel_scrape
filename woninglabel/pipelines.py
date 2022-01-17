@@ -40,16 +40,16 @@ class WoninglabelPipeline(object):
 
         try:
             
-            instance = session.query(ItemData).filter_by(
-                ObjectId=item["ObjectId"], Bedrijf=item['Bedrijf']
-            ).first()
+            # instance = session.query(ItemData).filter_by(
+            #     ObjectId=item["ObjectId"], Bedrijf=item['Bedrijf']
+            # ).first()
             
-            if not instance:
+            # if not instance:
 
-                session.add(property)
-                session.commit()
-            else:
-                pass
+            session.add(property)
+            session.commit()
+            # else:
+            #     pass
                 # session.query(ItemData).filter_by(
                 #     ItemNumber=item["ItemNumber"]
                 # ).update( dict(
