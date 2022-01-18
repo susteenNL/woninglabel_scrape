@@ -1,6 +1,7 @@
 #!/bin/bash 
 #SCRIPT=$(readlink -f "$0")
-SCRIPT=$(readlink "$0")
+# SCRIPT=$(readlink "$0")
+SCRIPT=$0
 SCRIPTPATH=$(dirname "$SCRIPT")
 echo $SCRIPTPATH
 cd $SCRIPTPATH
