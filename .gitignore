@@ -1,6 +1,5 @@
 csv2xlsx.exe
 .vscode/*
-*.csv
 *.xlsx
 Samples/*
 *.pyc
